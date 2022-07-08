@@ -51,7 +51,6 @@ function AddProject({navigation,route}) {
     }
   return (
     <View style={styles.container}>
-      {/* <Image source={require('../utils/undraw_Login_re_4vu2.png')} style={{height:150,width:210}}/> */}
     <Text style={styles.text}>Add Project Details</Text>
     <Textinp
         marginTop={10}

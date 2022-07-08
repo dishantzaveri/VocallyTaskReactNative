@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './src/screens/Splash';
-import BottomTabs from './src/bottomtabs';
-import Location from './src/location';
-import AddProject from './src/AddProject';
+import BottomTabs from './src/screens/bottomtabs';
+import Location from './src/screens/location';
+import AddProject from './src/screens/AddProject';
 
 const Stack = createStackNavigator();
 function App() {
