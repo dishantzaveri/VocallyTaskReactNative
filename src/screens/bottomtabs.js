@@ -2,6 +2,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Location from './location';
+import Location2 from './location2';
+import Location1 from './location1';
+import Location3 from './location3';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,52 +21,52 @@ const BottomTabs = () => {
       }}
     >
       <Tab.Screen
-        name="Location"
+        name="location"
         component={Location}
         options={{
           headerShown: false,
-          tabBarLabel: 'Locations',
+          tabBarLabel: 'Default',
           tabBarColor: 'blue',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-home" color={color} size={26} />
+            <Icon name="ios-location" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Dashboard"
+        name="location1"
         options={{
           headerShown: false,
           // title:'Project Details'
-          tabBarLabel: 'Dashboard',
+          tabBarLabel: 'Black',
           tabBarColor: '#1f65ff',
 
           tabBarIcon: ({ color }) => (
-            <Icon name="md-desktop-outline" color={color} size={26} />
+            <Icon name="ios-location" color={color} size={26} />
           ),
         }}
-        component={Location}
+        component={Location1}
       />
       <Tab.Screen
-        name="Violations"
+        name="location2"
         options={{
           headerShown: false,
-          tabBarLabel: 'Violations',
+          tabBarLabel: "Aubergine",
           tabBarColor: '#000000',
           tabBarIcon: ({ color }) => (
-            <Icon name="analytics-sharp" color={color} size={26} />
+            <Icon name="ios-location" color={color} size={26} />
           ),
         }}
-        component={Location}
+        component={Location2}
       />
       <Tab.Screen
-        name="Contractorlist"
-        component={Location}
+        name="location3"
+        component={Location3}
         options={{
           headerShown: false,
-          tabBarLabel: 'Contractors',
+          tabBarLabel: "Retro",
           tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
-            <Icon name="person-sharp" color={color} size={26} />
+            <Icon name="ios-location" color={color} size={26} />
           ),
         }}
       />

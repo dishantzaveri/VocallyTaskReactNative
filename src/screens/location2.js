@@ -5,7 +5,7 @@ import MapView from "react-native-maps";
 import { URL, token } from "../utils/link";
 import SearchBar from "react-native-dynamic-search-bar";
 import { mapStyleAubergine, mapStyleBlack, mapStyleSilver, mapStyleRetro} from "../components/MapColours";
-export default function Location({ navigation }) {
+export default function Location2({ navigation }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visible, setVisible] = useState(false);
@@ -68,6 +68,7 @@ export default function Location({ navigation }) {
           longitudeDelta: 0.0421,
         }}
         onRegionChangeComplete={(region) => setRegion(region)}
+        customMapStyle={mapStyleAubergine}
       >
         <Marker coordinate={mumbaiRegion} title="Mumbai" onPress={() => navigation.navigate('Details')} />
         {data.map((item, index) => (

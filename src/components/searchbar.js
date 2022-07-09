@@ -13,7 +13,7 @@ const SearchBar = (props) => {
             : styles.searchBar__clicked
         }
       >
-      <Icon name="ios-home" color={color} size={26} />
+      <Icon name="ios-home" color='black' size={26} />
         <TextInput
           style={styles.input}
           placeholder="Search"
@@ -25,7 +25,7 @@ const SearchBar = (props) => {
         />
         
         {props.clicked && (
-          <Icon name="ios-home" color={color} size={26} style={{ padding: 1 }} onPress={() => {
+          <Icon name="ios-home" color='black' size={26} style={{ padding: 1 }} onPress={() => {
             props.setSearchPhrase("")
         }} />
         )}

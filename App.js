@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './src/screens/Splash';
 import BottomTabs from './src/screens/bottomtabs';
 import Location from './src/screens/location';
 import AddProject from './src/screens/AddProject';
+import Location1 from './src/screens/location1';
+import Location2 from './src/screens/location2';
+import Location3 from './src/screens/location3';
 
 const Stack = createStackNavigator();
 function App() {
@@ -12,7 +15,7 @@ function App() {
     console.disableYellowBox = true
   })
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={DarkTheme}>
       <Stack.Navigator initialRouteName="Splash" independent={true}>
         <Stack.Screen
           name="Splash"
@@ -27,8 +30,20 @@ function App() {
           component={AddProject}
           options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen
-          name="Location"
+          name="location"
           component={Location}
+          options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen
+          name="location1"
+          component={Location1}
+          options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen
+          name="location2"
+          component={Location2}
+          options={{ headerShown: false }}></Stack.Screen>
+          <Stack.Screen
+          name="location3"
+          component={Location3}
           options={{ headerShown: false }}></Stack.Screen>
         </Stack.Navigator>
     </NavigationContainer>
