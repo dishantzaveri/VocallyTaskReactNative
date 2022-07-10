@@ -8,11 +8,13 @@ import AddProject from './src/screens/AddProject';
 import Location1 from './src/screens/location1';
 import Location2 from './src/screens/location2';
 import Location3 from './src/screens/location3';
+import Search from './src/screens/search';
 
 const Stack = createStackNavigator();
 function App() {
-  useEffect(() => {
-    console.disableYellowBox = true
+  useEffect(() => {console.disableYellowBox = true;
+    
+
   })
   return (
     <NavigationContainer theme={DarkTheme}>
@@ -25,7 +27,7 @@ function App() {
           name="bottomtabs"
           component={BottomTabs}
           options={{ headerShown: false }}></Stack.Screen>
-      <Stack.Screen
+        <Stack.Screen
           name="AddProject"
           component={AddProject}
           options={{ headerShown: false }}></Stack.Screen>
@@ -37,15 +39,20 @@ function App() {
           name="location1"
           component={Location1}
           options={{ headerShown: false }}></Stack.Screen>
-          <Stack.Screen
+        <Stack.Screen
           name="location2"
           component={Location2}
           options={{ headerShown: false }}></Stack.Screen>
-          <Stack.Screen
+        <Stack.Screen
           name="location3"
           component={Location3}
           options={{ headerShown: false }}></Stack.Screen>
-        </Stack.Navigator>
+
+        <Stack.Screen
+          name="search"
+          component={Search}
+          options={{ headerShown: false }}></Stack.Screen>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
